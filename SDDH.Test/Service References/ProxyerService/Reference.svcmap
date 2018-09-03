@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47e08ed4-377c-4e72-ab6d-5a1bf0916d3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EtermProxyerService.xsd" MetadataType="Schema" ID="bb626c26-a464-41c1-a438-d796270ffca0" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EtermProxyerService1.xsd" MetadataType="Schema" ID="35594ecf-b648-4c0e-b585-bb483b71f4e9" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EtermProxyerService.disco" MetadataType="Disco" ID="c7274bf8-7a16-4c9f-a92f-0b0fed0cd18d" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?disco" />
+    <MetadataFile FileName="EtermProxyerService.wsdl" MetadataType="Wsdl" ID="e590a9d7-4635-4a86-b987-3e55b832d441" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?wsdl" />
+    <MetadataFile FileName="EtermProxyerService2.xsd" MetadataType="Schema" ID="fec7f43b-2f93-4a3c-8226-e4322e858712" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EtermProxyerService3.xsd" MetadataType="Schema" ID="ab754767-3efd-4be4-99ce-54c27f8a1bed" SourceId="1" SourceUrl="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,16 @@
+﻿.swagger-section #header {
+    background-color: black;
+    padding: 14px;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+.swagger-section #explore {
+    background-color: #428bca;
+}
+
+.swagger-section .swagger-ui-wrap a { 
+    color: #428bca;
+}

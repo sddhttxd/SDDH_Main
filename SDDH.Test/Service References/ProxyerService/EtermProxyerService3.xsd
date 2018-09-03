@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" />
+  <xs:element name="ExcuteCmd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q1:ExcuteCmdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcuteCmdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="ExcuteCmdResult" nillable="true" type="q2:ExcuteCmdResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcuteSSCmd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q3:ExcuteSSCmdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcuteSSCmdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="ExcuteSSCmdResult" nillable="true" type="q4:ExcuteSSCmdResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q5:CreatePNRRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="CreatePNRResult" nillable="true" type="q6:CreatePNRResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRByConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q7:CreatePNRByConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRByConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="CreatePNRByConfigResult" nillable="true" type="q8:CreatePNRByConfigResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtermAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtermAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEtermAddressResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOpenEtermProxyer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="airCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ticketType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOpenEtermProxyerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsOpenEtermProxyerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOpenEtermProxyerWithProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerId" type="xs:int" />
+        <xs:element minOccurs="0" name="airCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ticketType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOpenEtermProxyerWithProviderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsOpenEtermProxyerWithProviderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidBookingLimitConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q9:ValidBookingLimitConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidBookingLimitConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="ValidBookingLimitConfigResult" nillable="true" type="q10:ValidBookingLimitConfigResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidBookingLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q11:ValidBookingLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidBookingLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="ValidBookingLimitResult" nillable="true" type="q12:ValidBookingLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAVData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="request" nillable="true" type="q13:AVRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAVDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" minOccurs="0" name="GetAVDataResult" nillable="true" type="q14:AVResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePnr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePnrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePnrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInfPnr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInfPnrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateInfPnrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateChangePnr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateChangePnrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateChangePnrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

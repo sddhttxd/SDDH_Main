@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EtermProxyerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/interface.jinri.cn.DTO" />
+      <xsd:import schemaLocation="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEtermProxyerService_ExcuteCmd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcuteCmd" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ExcuteCmd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcuteCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ExcuteSSCmd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcuteSSCmd" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ExcuteSSCmd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcuteSSCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNR" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePNRByConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRByConfig" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePNRByConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRByConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_GetEtermAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtermAddress" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_GetEtermAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtermAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_IsOpenEtermProxyer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOpenEtermProxyer" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_IsOpenEtermProxyer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOpenEtermProxyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_IsOpenEtermProxyerWithProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOpenEtermProxyerWithProvider" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_IsOpenEtermProxyerWithProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOpenEtermProxyerWithProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ValidBookingLimitConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidBookingLimitConfig" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ValidBookingLimitConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidBookingLimitConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ValidBookingLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidBookingLimit" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_ValidBookingLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidBookingLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_GetAVData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAVData" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_GetAVData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAVDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePnr_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePnr" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreatePnr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePnrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreateInfPnr_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInfPnr" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreateInfPnr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInfPnrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreateChangePnr_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChangePnr" />
+  </wsdl:message>
+  <wsdl:message name="IEtermProxyerService_CreateChangePnr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChangePnrResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEtermProxyerService">
+    <wsdl:operation name="ExcuteCmd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/ExcuteCmd" message="tns:IEtermProxyerService_ExcuteCmd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/ExcuteCmdResponse" message="tns:IEtermProxyerService_ExcuteCmd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcuteSSCmd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/ExcuteSSCmd" message="tns:IEtermProxyerService_ExcuteSSCmd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/ExcuteSSCmdResponse" message="tns:IEtermProxyerService_ExcuteSSCmd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePNR" message="tns:IEtermProxyerService_CreatePNR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePNRResponse" message="tns:IEtermProxyerService_CreatePNR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRByConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePNRByConfig" message="tns:IEtermProxyerService_CreatePNRByConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePNRByConfigResponse" message="tns:IEtermProxyerService_CreatePNRByConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEtermAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/GetEtermAddress" message="tns:IEtermProxyerService_GetEtermAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/GetEtermAddressResponse" message="tns:IEtermProxyerService_GetEtermAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOpenEtermProxyer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyer" message="tns:IEtermProxyerService_IsOpenEtermProxyer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyerResponse" message="tns:IEtermProxyerService_IsOpenEtermProxyer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOpenEtermProxyerWithProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyerWithProvider" message="tns:IEtermProxyerService_IsOpenEtermProxyerWithProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyerWithProviderResponse" message="tns:IEtermProxyerService_IsOpenEtermProxyerWithProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidBookingLimitConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/ValidBookingLimitConfig" message="tns:IEtermProxyerService_ValidBookingLimitConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/ValidBookingLimitConfigResponse" message="tns:IEtermProxyerService_ValidBookingLimitConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidBookingLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/ValidBookingLimit" message="tns:IEtermProxyerService_ValidBookingLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/ValidBookingLimitResponse" message="tns:IEtermProxyerService_ValidBookingLimit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAVData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/GetAVData" message="tns:IEtermProxyerService_GetAVData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/GetAVDataResponse" message="tns:IEtermProxyerService_GetAVData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePnr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePnr" message="tns:IEtermProxyerService_CreatePnr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/CreatePnrResponse" message="tns:IEtermProxyerService_CreatePnr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInfPnr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/CreateInfPnr" message="tns:IEtermProxyerService_CreateInfPnr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/CreateInfPnrResponse" message="tns:IEtermProxyerService_CreateInfPnr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChangePnr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtermProxyerService/CreateChangePnr" message="tns:IEtermProxyerService_CreateChangePnr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtermProxyerService/CreateChangePnrResponse" message="tns:IEtermProxyerService_CreateChangePnr_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEtermProxyerService" type="tns:IEtermProxyerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExcuteCmd">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/ExcuteCmd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcuteSSCmd">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/ExcuteSSCmd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNR">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/CreatePNR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRByConfig">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/CreatePNRByConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEtermAddress">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/GetEtermAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOpenEtermProxyer">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOpenEtermProxyerWithProvider">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/IsOpenEtermProxyerWithProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidBookingLimitConfig">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/ValidBookingLimitConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidBookingLimit">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/ValidBookingLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAVData">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/GetAVData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePnr">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/CreatePnr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInfPnr">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/CreateInfPnr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChangePnr">
+      <soap:operation soapAction="http://tempuri.org/IEtermProxyerService/CreateChangePnr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EtermProxyerService">
+    <wsdl:port name="BasicHttpBinding_IEtermProxyerService" binding="tns:BasicHttpBinding_IEtermProxyerService">
+      <soap:address location="http://etermproxyer.jinri.org.cn/EtermProxyerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

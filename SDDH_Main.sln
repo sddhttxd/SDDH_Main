@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Test", "SDDH.Test\SDDH.Test.csproj", "{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Utility", "SDDH.Utility\SDDH.Utility.csproj", "{3BC22041-A24F-48EA-85D4-E26012CB83D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Web", "SDDH.Web\SDDH.Web.csproj", "{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Api", "SDDH.Api\SDDH.Api.csproj", "{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Metrics", "SDDH.Metrics\SDDH.Metrics.csproj", "{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		MonoDebug|Any CPU = MonoDebug|Any CPU
+		MonoRelease|Any CPU = MonoRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B330A62-E514-4EB0-8DE5-C1A413F35BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC22041-A24F-48EA-85D4-E26012CB83D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E25D5A8-9D9C-4935-9B8E-7D27D7586F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6612ACB1-5BA8-4DDB-B65E-D7D1D108A878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.MonoDebug|Any CPU.ActiveCfg = MonoDebug|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.MonoDebug|Any CPU.Build.0 = MonoDebug|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.MonoRelease|Any CPU.ActiveCfg = MonoRelease|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.MonoRelease|Any CPU.Build.0 = MonoRelease|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://yf-pc:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SDDH.Test\\SDDH.Test.csproj
+		SccProjectName1 = SDDH.Test
+		SccLocalPath1 = SDDH.Test
+		SccProjectUniqueName2 = SDDH.Utility\\SDDH.Utility.csproj
+		SccProjectName2 = SDDH.Utility
+		SccLocalPath2 = SDDH.Utility
+		SccProjectUniqueName3 = SDDH.Web\\SDDH.Web.csproj
+		SccProjectName3 = SDDH.Web
+		SccLocalPath3 = SDDH.Web
+	EndGlobalSection
+EndGlobal
