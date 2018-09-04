@@ -95,6 +95,7 @@
     <Compile Include="Cache\StackExchange.Redis\IRedisAsyncCache.cs" />
     <Compile Include="Common\GetPath.cs" />
     <Compile Include="Common\MD5Helper.cs" />
+    <Compile Include="Common\Thread.cs" />
     <Compile Include="Config\ConfigurationAppSetting.cs" />
     <Compile Include="Config\RedisConfig\RedisConfigInfo.cs" />
     <Compile Include="Flie\ConfigFile.cs" />
