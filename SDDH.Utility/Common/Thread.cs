@@ -11,6 +11,7 @@ namespace SDDH.Utility.Common
     /// </summary>
     public class Thread
     {
+        #region  asyn demo
         /// <summary>
         /// 声明委托
         /// </summary>
@@ -71,6 +72,44 @@ namespace SDDH.Utility.Common
             //Do something
             return new object();
         }
+        #endregion
 
+        #region thread/task
+        /// <summary>
+        /// 任务控制
+        /// </summary>
+        public void ThreadDemo()
+        {
+            try
+            {
+                int threads = 5; //线程数
+
+                for (int i = 0; i < threads; i++)
+                {
+                    //每次都创建新线程，耗资源
+                    //Thread thread = new Thread(TaskProcess);
+                    //thread.Start();
+
+                    //使用线程池，利用空闲线程
+                    //ThreadPool.QueueUserWorkItem(m => { TaskProcess(); });
+
+                    //与ThreadPool相似
+                    Task.Run(() => { TaskProcess(); });
+                }
+
+                //比for循环+Task(ThreadPool)效率高
+                //Parallel.For(1, threads, i => { TaskProcess(); });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void TaskProcess()
+        {
+            //Do something
+        }
+        #endregion
     }
 }
