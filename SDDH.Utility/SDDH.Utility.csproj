@@ -38,6 +38,10 @@
       <HintPath>..\packages\EnyimMemcached.2.12\lib\net35\Enyim.Caching.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -71,6 +75,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,6 +93,8 @@
     <Compile Include="Cache\ServiceStack.Redis\IRedisCache.cs" />
     <Compile Include="Cache\ServiceStack.Redis\RedisCacheImpl.cs" />
     <Compile Include="Cache\StackExchange.Redis\IRedisAsyncCache.cs" />
+    <Compile Include="Common\GetPath.cs" />
+    <Compile Include="Common\MD5Helper.cs" />
     <Compile Include="Config\ConfigurationAppSetting.cs" />
     <Compile Include="Config\RedisConfig\RedisConfigInfo.cs" />
     <Compile Include="Flie\ConfigFile.cs" />
@@ -97,6 +104,7 @@
     <Compile Include="Metrics\MetricsManager.cs" />
     <Compile Include="Model\ServerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zip\ZipHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Log\" />
