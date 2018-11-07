@@ -108,6 +108,10 @@
     </Content>
     <Content Include="Configs\AppSetting.config" />
     <Content Include="Configs\ConnectionString.config" />
+    <Content Include="Zhenglm\front.css" />
+    <Content Include="Zhenglm\jquery.js" />
+    <Content Include="Zhenglm\jquery.min.js" />
+    <Content Include="Zhenglm\zhunkaozheng.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

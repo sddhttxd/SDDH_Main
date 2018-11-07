@@ -77,7 +77,21 @@ namespace SDDH.Test
             }
         }
 
-        
+        [TestMethod]
+        public void RedisAsyncTest()
+        {
+            try
+            {
+                string key = "testKey";
+                string value = "RedisAsyncTest";
+                CacheManager.Instance.RedisAsync.Set(key, value);
+                var result = CacheManager.Instance.RedisAsync.Get(key);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
     }
 
 

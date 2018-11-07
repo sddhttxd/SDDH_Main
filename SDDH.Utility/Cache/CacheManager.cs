@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDDH.Utility.Cache.StackExchange.Redis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,11 @@ namespace SDDH.Utility.Cache
         public IRedisCache Redis
         {
             get { return RedisCacheImpl.Instance; }
+        }
+
+        public IRedisAsyncCache RedisAsync
+        {
+            get { return RedisAsyncCacheImpl.Instance; }
         }
 
     }

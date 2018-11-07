@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SDDH.Utility.Cache
 {
-    public interface IRedisAsyncCache
+    public interface IRedisAsyncCache : IMemoryCache
     {
+        Task<string> GetAsync(string key);
+        Task<T> GetAsync<T>(string key);
+        Task<bool> RemoveAsync(string key);
     }
 }

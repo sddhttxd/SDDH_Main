@@ -1,0 +1,13 @@
+body {background-color: #fff;font-family:"Microsoft Yahei",arial;font-size: 14px;color: #4c4c4c;}
+ol,ul,dl {list-style: none;margin: 0;}
+.no-padding-left {padding-left: 0;}
+.no-padding-right {padding-right:0}
+.no-padding-all {padding: 0;}
+a{color: #4c4c4c;text-decoration: none;}
+a:hover {text-decoration: none;color: #4c4c4c;}
+table{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+

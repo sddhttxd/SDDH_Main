@@ -11,5 +11,6 @@ namespace SDDH.Utility.Cache
         IMemoryCache Memory { get; }
         IMemcachedCache Memcached { get; }
         IRedisCache Redis { get; }
+        IRedisAsyncCache RedisAsync { get; }
     }
 }

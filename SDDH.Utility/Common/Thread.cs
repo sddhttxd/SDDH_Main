@@ -89,7 +89,7 @@ namespace SDDH.Utility.Common
                     //每次都创建新线程，耗资源
                     //Thread thread = new Thread(TaskProcess);
                     //thread.Start();
-
+                    
                     //使用线程池，利用空闲线程
                     //ThreadPool.QueueUserWorkItem(m => { TaskProcess(); });
 

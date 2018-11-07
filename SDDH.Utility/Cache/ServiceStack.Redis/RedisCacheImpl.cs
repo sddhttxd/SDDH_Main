@@ -17,6 +17,11 @@ namespace SDDH.Utility.Cache
         {
             get { return _instance.Value; }
         }
+        static PooledRedisClientManager ClientManager
+        {
+            get { return lazyRedisManager.Value; }
+        }
+
 
         /// <summary>
         /// 连接池管理对象
@@ -28,11 +33,6 @@ namespace SDDH.Utility.Cache
             string readWriteHosts = ConfigurationAppSetting.RedisServerIP;
             return new PooledRedisClientManager(poolSize, poolTimeOutSeconds, readWriteHosts);
         });
-        static PooledRedisClientManager ClientManager
-        {
-            get { return lazyRedisManager.Value; }
-        }
-
         /// <summary>
         /// 连接池管理对象2
         /// </summary>
