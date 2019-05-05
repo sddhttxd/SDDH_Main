@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="UtilityTest\CacheTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilityTest\MathTest.cs" />
     <Compile Include="UtilityTest\MetricsTest.cs" />
     <Compile Include="UtilityTest\HttpClientTest.cs" />
     <Compile Include="UtilityTest\ServiceTest.cs" />

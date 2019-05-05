@@ -89,7 +89,7 @@ namespace SDDH.Utility.Common
                     //每次都创建新线程，耗资源
                     //Thread thread = new Thread(TaskProcess);
                     //thread.Start();
-                    
+
                     //使用线程池，利用空闲线程
                     //ThreadPool.QueueUserWorkItem(m => { TaskProcess(); });
 
@@ -99,6 +99,12 @@ namespace SDDH.Utility.Common
 
                 //比for循环+Task(ThreadPool)效率高
                 //Parallel.For(1, threads, i => { TaskProcess(); });
+
+                ParallelOptions options = new ParallelOptions();
+                options.MaxDegreeOfParallelism = threads;//最大任务并行数
+                List<int> list = new List<int>();
+                Parallel.ForEach<int>(list, options, o => TaskProcess());
+
             }
             catch (Exception ex)
             {

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Api", "SDDH.Api\SDDH.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Metrics", "SDDH.Metrics\SDDH.Metrics.csproj", "{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Service", "SDDH.Service\SDDH.Service.csproj", "{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,23 +63,16 @@ Global
 		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.MonoRelease|Any CPU.Build.0 = MonoRelease|Any CPU
 		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DFC7CC0-CB1D-4EA2-9492-BD1F0BEB664B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6173EFD7-3697-4FFB-9CD5-B345ECE52EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://yf-pc:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SDDH.Test\\SDDH.Test.csproj
-		SccProjectName1 = SDDH.Test
-		SccLocalPath1 = SDDH.Test
-		SccProjectUniqueName2 = SDDH.Utility\\SDDH.Utility.csproj
-		SccProjectName2 = SDDH.Utility
-		SccLocalPath2 = SDDH.Utility
-		SccProjectUniqueName3 = SDDH.Web\\SDDH.Web.csproj
-		SccProjectName3 = SDDH.Web
-		SccLocalPath3 = SDDH.Web
 	EndGlobalSection
 EndGlobal
