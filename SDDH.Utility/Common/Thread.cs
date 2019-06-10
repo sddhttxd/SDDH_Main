@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SDDH.Utility.Common
@@ -116,6 +118,40 @@ namespace SDDH.Utility.Common
         {
             //Do something
         }
+
+        public void TaskDemo()
+        {
+            int taskCount = 0;
+            List<int> list = new List<int>();
+            List<Task> tasks = new List<Task>();
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            foreach (int num in list)
+            {
+                Task task = Task.Run(() =>
+                {
+                    Interlocked.Increment(ref taskCount);
+                });
+
+                Task task1 = Task.Run<int>(() =>
+                {
+                    Interlocked.Increment(ref taskCount);
+                    return num;
+                });
+
+                //Task task2 = Task.Run<int>(o =>
+                //{
+                //    Interlocked.Increment(ref taskCount);
+                //    return num;
+                //},num);
+            }
+            Task.WhenAll(tasks).ContinueWith(o =>
+            {
+                watch.Stop();
+                long usedTime = watch.ElapsedMilliseconds;
+            });
+        }
+
         #endregion
     }
 }

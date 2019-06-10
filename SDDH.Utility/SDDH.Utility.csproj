@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.0\lib\net45\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
       <HintPath>..\packages\EnyimMemcached.2.12\lib\net35\Enyim.Caching.dll</HintPath>
       <Private>True</Private>
@@ -101,6 +104,7 @@
     <Compile Include="Common\Thread.cs" />
     <Compile Include="Config\ConfigurationAppSetting.cs" />
     <Compile Include="Config\RedisConfig\RedisConfigInfo.cs" />
+    <Compile Include="DataBase\SqlServerDemo.cs" />
     <Compile Include="Flie\ConfigFile.cs" />
     <Compile Include="Http\HttpClientHelper.cs" />
     <Compile Include="Http\HttpHelper.cs" />
