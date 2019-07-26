@@ -101,6 +101,7 @@
     <Compile Include="UtilityTest\MetricsTest.cs" />
     <Compile Include="UtilityTest\HttpClientTest.cs" />
     <Compile Include="UtilityTest\ServiceTest.cs" />
+    <Compile Include="UtilityTest\DemoTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SDDH.Metrics\SDDH.Metrics.csproj">

@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Service", "SDDH.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Demo", "SDDH_Console\SDDH.Demo.csproj", "{5B446A10-D3D2-4F7C-A155-C0453654083C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Job", "SDDH.Job\SDDH.Job.csproj", "{025DC67E-839D-4865-8371-02501361E438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDDH.Consoles", "SDDH.Console\SDDH.Consoles.csproj", "{7E229D0E-8DDE-42A0-9032-7B441883092A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,22 @@ Global
 		{5B446A10-D3D2-4F7C-A155-C0453654083C}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
 		{5B446A10-D3D2-4F7C-A155-C0453654083C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B446A10-D3D2-4F7C-A155-C0453654083C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025DC67E-839D-4865-8371-02501361E438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.MonoDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.MonoDebug|Any CPU.Build.0 = Debug|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.MonoRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.MonoRelease|Any CPU.Build.0 = Release|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E229D0E-8DDE-42A0-9032-7B441883092A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
