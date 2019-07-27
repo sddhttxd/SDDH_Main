@@ -12,10 +12,13 @@ namespace SDDH.Consoles
         public static void Main(string[] args)
         {
             //DoManager();
-            //ParallelDemo();
-            ForTaskDemo();
+            ParallelDemo();
+            //ForTaskDemo();
         }
 
+        /// <summary>
+        /// 性能优于for循环，建议使用此方式
+        /// </summary>
         private static void ParallelDemo()
         {
             List<int> list = new List<int>();
@@ -41,6 +44,9 @@ namespace SDDH.Consoles
 
         private static int maxThreads = 5; //最大线程数
         private static int currentThreads = 0; //当前线程数
+        /// <summary>
+        /// 此种方式开启多线程传参有问题，待优化，勿用
+        /// </summary>
         private static void ForTaskDemo()
         {
             List<int> demoList = new List<int>();
@@ -53,17 +59,27 @@ namespace SDDH.Consoles
             {
                 if (currentThreads < maxThreads)
                 {
+                    Console.WriteLine(string.Format("index:<{0}>,currentThreads:{1}", i, currentThreads));
                     Task task = Task.Run(() =>
                     {
-                        currentThreads++; //计数有问题，待优化优化
-                        TaskProcess2(i);
+                        //TaskProcess2(i);
+                        string log = string.Format("+++task log:【{0}】,subthreadId:{1},currentThreads:{2}+++", i, Thread.CurrentThread.ManagedThreadId, currentThreads);
+                        Console.WriteLine(log);
+                        //currentThreads++; //计数有问题，待优化优化
+                        Interlocked.Increment(ref currentThreads);
                     });
                     task.ContinueWith(o =>
                     {
                         string log = string.Format("---finished :{0},subthreadId:{1}, currentThreads:{2}---", o, Thread.CurrentThread.ManagedThreadId, currentThreads);
                         Console.WriteLine(log);
-                        currentThreads--;
+                        //currentThreads--;
+                        Interlocked.Decrement(ref currentThreads);
                     });
+                }
+                else
+                {
+                    Console.WriteLine(string.Format("main else, threadId is: {0}, currentThreads = {1}>>>>>>>>>>>>>>>>", Thread.CurrentThread.ManagedThreadId, currentThreads));
+                    i--;
                 }
             }
             Console.WriteLine(string.Format("main end, threadId is: {0}, currentThreads = {1}", Thread.CurrentThread.ManagedThreadId, currentThreads));
