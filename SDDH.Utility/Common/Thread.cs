@@ -84,9 +84,14 @@ namespace SDDH.Utility.Common
         {
             try
             {
-                int threads = 5; //线程数
-
-                for (int i = 0; i < threads; i++)
+                int maxThreads = 5; //最大线程数
+                int currentThreads = 0; //当前线程数
+                List<int> demoList = new List<int>();
+                for (int i = 0; i <= 1000; i++)
+                {
+                    demoList.Add(i);
+                }
+                for (int i = 0; i < demoList.Count; i++)
                 {
                     //每次都创建新线程，耗资源
                     //Thread thread = new Thread(TaskProcess);
@@ -96,16 +101,30 @@ namespace SDDH.Utility.Common
                     //ThreadPool.QueueUserWorkItem(m => { TaskProcess(); });
 
                     //与ThreadPool相似
-                    Task.Run(() => { TaskProcess(); });
+                    //Task.Run(() => { TaskProcess(i); });
+                    if (currentThreads < maxThreads)
+                    {
+                        Task task = new Task(() =>
+                        {
+                            currentThreads++;
+                            TaskProcess(i);
+                        });
+                        task.ContinueWith(o =>
+                        {
+                            currentThreads--;
+                            Console.Write("thread : " + o + " finished");
+                        });
+                    }
                 }
 
                 //比for循环+Task(ThreadPool)效率高
                 //Parallel.For(1, threads, i => { TaskProcess(); });
 
                 ParallelOptions options = new ParallelOptions();
-                options.MaxDegreeOfParallelism = threads;//最大任务并行数
+                options.MaxDegreeOfParallelism = maxThreads;//最大任务并行数
                 List<int> list = new List<int>();
-                Parallel.ForEach<int>(list, options, o => TaskProcess());
+                Parallel.ForEach<int>(list, options, o => TaskProcess(o));
+                //见下示例
 
             }
             catch (Exception ex)
@@ -114,7 +133,7 @@ namespace SDDH.Utility.Common
             }
         }
 
-        public void TaskProcess()
+        public void TaskProcess(int index)
         {
             //Do something
         }
@@ -150,6 +169,28 @@ namespace SDDH.Utility.Common
                 watch.Stop();
                 long usedTime = watch.ElapsedMilliseconds;
             });
+        }
+
+        private static void ParallelDemo()
+        {
+            List<int> list = new List<int>();
+            for (int i = 0; i <= 1000; i++)
+            {
+                list.Add(i);
+            }
+            Console.WriteLine("Mainthread start! threadId:" + System.Threading.Thread.CurrentThread.ManagedThreadId);
+            ParallelOptions options = new ParallelOptions();
+            options.MaxDegreeOfParallelism = 5;//最大任务并行数
+            Parallel.ForEach<int>(list, options, o => TaskProcess2(o));
+            Console.WriteLine("Mainthread end! threadId:" + System.Threading.Thread.CurrentThread.ManagedThreadId);
+            Console.Read();
+        }
+
+        private static void TaskProcess2(int index)
+        {
+            string log = string.Format("task log:{0},subthreadId:{1}", index, System.Threading.Thread.CurrentThread.ManagedThreadId);
+            System.Threading.Thread.Sleep(200);
+            Console.WriteLine(log);
         }
 
         #endregion
