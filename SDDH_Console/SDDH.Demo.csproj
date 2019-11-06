@@ -48,8 +48,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,11 +66,178 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapperDemo.cs" />
+    <Compile Include="CdiscountDemo.cs" />
+    <Compile Include="Connected Services\CdiscountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MarketplaceApiService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService.wsdl" />
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService1.wsdl" />
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\MarketplaceAPIService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.BrandListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.CategoryTreeMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.CloseDiscussionResultMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.CreateRefundVoucherMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.DiscussionMailGuidCreationResultMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.DiscussionMailListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.FulfilmentActivationMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.FulfilmentActivationReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.FulfilmentDeliveryDocumentMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.FulfilmentOrderLineListToSupplyMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.GlobalConfigurationMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ManageParcelResultMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferIntegrationReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferListPaginatedMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferProductListPaginatedMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferQuestionListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OfferStateReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OrderClaimListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OrderIntegrationMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OrderListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OrderQuestionListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.OrderStatusMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ParcelShopListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductIntegrationReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductListByIdentifierMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductMatchingFileMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductModelListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ProductStockListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.RelayIntegrationReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.RelaysFileDepositMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SellerIndicatorsMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SellerMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SellerRefundResultMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ServiceOrderListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SupplyOrderMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SupplyOrderReportListMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.SupplyOrderReportMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CdiscountService\SDDH.Demo.CdiscountService.ValidationResultMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -76,5 +251,28 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CdiscountService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CdiscountService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CdiscountService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CdiscountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Amazon\a_json_401.txt" />
+    <Content Include="Amazon\a_json_441.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
 </Project>

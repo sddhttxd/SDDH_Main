@@ -46,6 +46,13 @@ namespace SDDH.Test.UtilityTest
 
         }
 
+        [TestMethod]
+        public void RepalceTest()
+        {
+            var oldStr = "ORICO 2577U3 2.5\" USB 3.0 SATA HDD Box HDD Hard Disk Drive External HDD Enclosure Black Case";
+            var newStr = oldStr.Replace('"', '\"');
+            var newStr2 = oldStr.Replace("\"", "\\\"");
+        }
 
 
     }

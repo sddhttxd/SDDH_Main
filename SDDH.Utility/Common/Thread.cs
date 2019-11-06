@@ -157,12 +157,7 @@ namespace SDDH.Utility.Common
                     Interlocked.Increment(ref taskCount);
                     return num;
                 });
-
-                //Task task2 = Task.Run<int>(o =>
-                //{
-                //    Interlocked.Increment(ref taskCount);
-                //    return num;
-                //},num);
+                
             }
             Task.WhenAll(tasks).ContinueWith(o =>
             {
